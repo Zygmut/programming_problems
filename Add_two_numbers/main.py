@@ -1,55 +1,10 @@
 # https://leetcode.com/problems/add-two-numbers/
 
+
 class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-
-
-def create_list(values: tuple[int]) -> ListNode:
-    """Creates a linked list given a tuple of integers
-
-    Args:
-        values (tuple[int]): Values to be inside the linked list
-
-    Raises:
-        ValueError: If necessary
-
-    Returns:
-        ListNode: Linked list with args values
-    """
-
-
-    if not isinstance(values, tuple):
-        raise ValueError("Values need to be in a tuple")
-
-    if len(values) == 0:
-        raise ValueError("Tuple needs to have at least one value")
-
-    if len(values) > 100:
-        raise ValueError("Tuple length cannot exceed 100 values")
-
-    listnode = ListNode()
-    iter = listnode
-
-    if not isinstance(values[0], int):
-        raise ValueError("All values mustbe numeric")
-    if values[0] < 0 or values[0] > 9:
-        raise ValueError("Tuple can only contain values between 0 and 9. 0<=value<=9")
-    iter.val = values[0]
-
-    for value in values[1::]:
-        if not isinstance(value, int):
-            raise ValueError("All values mustbe numeric")
-        if value < 0 or value > 9:
-            raise ValueError(
-                "Tuple can only contain values between 0 and 9. 0<=value<=9"
-            )
-        iter.next = ListNode()
-        iter = iter.next
-        iter.val = value
-
-    return listnode
 
 
 class Solution(object):
