@@ -6,7 +6,7 @@ class Solution(object):
             raise ValueError("s must be a string")
 
         if len(s) > 5 * 104:
-            raise ValueError("s must have a maximum leng of 5*104")
+            raise ValueError("s must have a maximum length of 5*104")
 
         sol = 0
         used_chars = {}
