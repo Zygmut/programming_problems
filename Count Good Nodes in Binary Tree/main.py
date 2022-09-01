@@ -1,4 +1,5 @@
-#https://leetcode.com/problems/count-good-nodes-in-binary-tree/
+# https://leetcode.com/problems/count-good-nodes-in-binary-tree/
+
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -13,17 +14,18 @@ class Solution:
         node_stack = [(root, root.val)]
 
         while len(node_stack) != 0:
-            parent = node_stack.pop()
-            if not parent[0]:
+            parent, max_curr_val = node_stack.pop()
+            if not parent:
                 continue
 
-            if parent[0].val >= parent[1]:
+            if parent.val >= max_curr_val:
                 good_node_count += 1
 
-
-            weight = max(parent[0].val, parent[1])
-            node_stack.append((parent[0].left, weight))
-            node_stack.append((parent[0].right, weight))
-
+            weight = max(parent.val, max_curr_val)
+            
+            if parent.left:
+                node_stack.append((parent.left, weight))
+            if parent.right:
+                node_stack.append((parent.right, weight))
 
         return good_node_count
