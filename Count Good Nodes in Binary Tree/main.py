@@ -1,4 +1,4 @@
-#https://leetcode.com/problems/count-good-nodes-in-binary-tree/
+# https://leetcode.com/problems/count-good-nodes-in-binary-tree/
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
