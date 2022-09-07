@@ -22,7 +22,7 @@ class Solution:
                 good_node_count += 1
 
             weight = max(parent.val, max_curr_val)
-            
+
             if parent.left:
                 node_stack.append((parent.left, weight))
             if parent.right:

@@ -18,12 +18,9 @@ def create_tree(values: list[int]) -> TreeNode:
     return inner()
 
 
-@pytest.mark.parametrize("input,expected", (
-    ([3,1,4,3,None,1,5], 4),
-    ([3,3,None,4,2], 3),
-    ([1], 1)
-))
+@pytest.mark.parametrize(
+    "input,expected", (([3, 1, 4, 3, None, 1, 5], 4), ([3, 3, None, 4, 2], 3), ([1], 1))
+)
 def test_count(input, expected):
     sol = Solution()
     assert sol.goodNodes(create_tree(input)) is expected
-

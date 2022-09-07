@@ -1,4 +1,5 @@
-#https://leetcode.com/problems/spiral-matrix
+# https://leetcode.com/problems/spiral-matrix
+
 
 class Solution:
     def spiralOrder(self, matrix: list[list[int]]) -> list[int]:
@@ -13,7 +14,7 @@ class Solution:
         if bottom < 1:
             raise ValueError("m should be greater than 1")
 
-        if right +1 > 10:
+        if right + 1 > 10:
             raise ValueError("n should be less than 10")
 
         while True:

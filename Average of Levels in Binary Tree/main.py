@@ -27,5 +27,5 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
 
-            res.append(sum/l)
+            res.append(sum / l)
         return res
