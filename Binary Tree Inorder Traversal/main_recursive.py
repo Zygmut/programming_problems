@@ -14,9 +14,11 @@ class Solution:
         res = []
 
         def inorder(node: TreeNode) -> None:
+            if not node:
+                return 
             if node.left:
                 inorder(node.left)
-            res.append(node)
+            res.append(node.val)
             if node.right:
                 inorder(node.right)
 
