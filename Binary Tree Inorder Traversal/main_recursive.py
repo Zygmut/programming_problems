@@ -10,12 +10,12 @@ class TreeNode:
 
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> list[int]:
+        if not root:
+            return []
 
         res = []
 
         def inorder(node: TreeNode) -> None:
-            if not node:
-                return 
             if node.left:
                 inorder(node.left)
             res.append(node.val)
