@@ -1,5 +1,5 @@
 import pytest
-import main_recursive.Solution as SOLREC
+from main_recursive import Solution
 from main_recursive import TreeNode
 
 
@@ -20,7 +20,18 @@ def create_tree(values: list[int]) -> TreeNode:
 
 
 @pytest.mark.parametrize(
-    "problem,expected", (([1, null, 2, 3], [1, 3, 2]), ([], []), ([1], [1]))
+    "problem,expected", (([1, None, 2, None, None, 3], [1, 3, 2]), ([], []), ([1], [1]))
 )
 def test_recursive(problem, expected):
-    pass
+    sol = Solution()
+    assert sol.inorderTraversal(create_tree(problem)) == expected
+
+
+@pytest.mark.parametrize(
+    "problem,expected",
+    (([-101], ValueError), ([101], ValueError), ([0] * 102, ValueError)),
+)
+def test_exceptions_recursive(problem, expected):
+    with pytest.raises(expected):
+        sol = Solution()
+        sol.inorderTraversal(create_tree(problem))
