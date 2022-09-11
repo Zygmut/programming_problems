@@ -10,7 +10,7 @@ def test_main(problem, expected):
 
 
 @pytest.mark.parametrize(
-    "problem,expeted",
+    "problem,expected",
     (),
 )
 def test_exceptions_main(problem, expected):
