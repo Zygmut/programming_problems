@@ -16,8 +16,8 @@ def test_main(problem, expected):
     (
         ([], ValueError),
         ([0] * (10**5 + 1), ValueError),
-        ([-1], ValueError),
-        ([10**5 + 1], ValueError),
+        ([-1, -2], ValueError),
+        ([1 + 10**5, 2 * (1 + 10**5)], ValueError),
     ),
 )
 def test_exceptions_main(problem, expected):

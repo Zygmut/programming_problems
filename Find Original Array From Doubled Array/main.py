@@ -10,7 +10,7 @@ class Solution:
         sol = []
         changed.sort()
 
-        def binary_search(arr: list[int, ...], val: int) -> int | None:
+        def binary_search(arr: list[int], val: int) -> int | None:
             i = bisect_left(arr, val)
             if i != len(arr) and arr[i] == val:
                 return i
@@ -18,15 +18,17 @@ class Solution:
                 return None
 
         while changed:
-
             val = changed.pop(0)
+
             if not (0 <= val <= 10**5):
                 raise ValueError("Values of the array must be within [0, 10**5]")
 
             loc = binary_search(changed, val * 2)
+
             if loc is not None:
                 sol.append(val)
                 changed.pop(loc)
             else:
                 return []
+
         return sol
