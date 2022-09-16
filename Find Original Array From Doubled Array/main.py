@@ -21,7 +21,7 @@ class Solution:
                     lo = mid + 1
                 else:
                     hi = mid
-            
+
             if lo != len(arr) and arr[lo] == val:
                 return lo
             else:
