@@ -17,14 +17,6 @@ def fizz_buzz(
 
 
 if __name__ == "__main__":
-
-    print(
-        ", ".join(
-            fizz_buzz(
-                35, [(lambda x: x % 3 == 0, "Beer"), (lambda x: x % 5 == 0, "Cocaine")]
-            )
-        )
-    )
     assert (
         ", ".join(fizz_buzz(35, separator=" "))
         == "1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, Fizz Buzz, 16, 17, Fizz, 19, Buzz, Fizz, 22, 23, Fizz, Buzz, 26, Fizz, 28, 29, Fizz Buzz, 31, 32, Fizz, 34, Buzz"
