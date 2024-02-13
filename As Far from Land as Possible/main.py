@@ -4,6 +4,7 @@
 # [1162] As Far from Land as Possible
 #
 
+
 # @lc code=start
 class Solution:
     def maxDistance(self, grid: list[list[int]]) -> int:

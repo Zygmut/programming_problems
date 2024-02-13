@@ -7,6 +7,7 @@
 from functools import reduce
 from collections import deque
 
+
 # @lc code=start
 class Solution:
     def shortestPathAllKeys(self, grid: list[str]) -> int:
@@ -24,7 +25,7 @@ class Solution:
             (
                 (row_idx, row.index("@"))
                 for row_idx, row in enumerate(grid)
-                if any(char  == '@' for char in row)
+                if any(char == "@" for char in row)
             ),
             None,
         )
@@ -41,14 +42,17 @@ class Solution:
                 valid_tiles += curr_state.upper()
                 keys += 1
 
-            if(keys == total_keys):
+            if keys == total_keys:
                 return steps
 
             for delta_row, delta_col in movements:
                 # Check if new movement is out of bounds
                 updated_row, updated_col = curr_row + delta_row, curr_col + delta_col
 
-                if not (0 <= updated_row < num_rows and 0 <= updated_col < num_cols) or grid[updated_row][updated_col] not in valid_tiles:
+                if (
+                    not (0 <= updated_row < num_rows and 0 <= updated_col < num_cols)
+                    or grid[updated_row][updated_col] not in valid_tiles
+                ):
                     continue
 
                 if (updated_row, updated_col, valid_tiles) in visited_positions:
@@ -58,4 +62,6 @@ class Solution:
                 queue.append((updated_row, updated_col, valid_tiles, steps + 1, keys))
 
         return -1
+
+
 # @lc code=end

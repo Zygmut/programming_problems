@@ -6,13 +6,14 @@
 
 # @lc code=start
 
+
 class Solution:
     def totalCost(self, costs: List[int], k: int, candidates: int) -> int:
         left_heap = costs[:candidates]
         left_threshold: int = candidates
         heapify(left_heap)
 
-        right_heap = costs[max(candidates, len(costs) - candidates):]
+        right_heap = costs[max(candidates, len(costs) - candidates) :]
         right_threshold: int = len(costs) - candidates - 1
         heapify(right_heap)
 
@@ -30,5 +31,6 @@ class Solution:
                     heappush(right_heap, costs[right_threshold])
                     right_threshold -= 1
         return sol
+
 
 # @lc code=end

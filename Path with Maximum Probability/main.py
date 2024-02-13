@@ -6,6 +6,7 @@
 
 from collections import deque
 
+
 # @lc code=start
 class Solution:
     def maxProbability(
@@ -37,4 +38,6 @@ class Solution:
                     queue.append(connection)
 
         return max_probability[end]
+
+
 # @lc code=end

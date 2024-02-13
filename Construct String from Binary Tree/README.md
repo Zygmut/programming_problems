@@ -4,7 +4,7 @@ Given the ```root``` of a binary tree, construct a string consisting of parenthe
 
 Omit all the empty parenthesis pairs that do not affect the one-to-one mapping relationship between the string and the original binary tree.
 
-## Examples 
+## Examples
 
 ### Example 1
 

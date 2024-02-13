@@ -4,6 +4,7 @@
 # [783] Minimum Distance Between BST Nodes
 #
 
+
 # @lc code=start
 # Definition for a binary tree node.
 # class TreeNode:
@@ -30,5 +31,6 @@ class Solution:
                 flattened_tree.append(node.right.val)
 
         return abs(flattened_tree[-1] - flattened_tree[-2])
-# @lc code=end
 
+
+# @lc code=end

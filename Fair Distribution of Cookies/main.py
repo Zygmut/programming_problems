@@ -4,6 +4,7 @@
 # [2305] Fair Distribution of Cookies
 #
 
+
 # @lc code=start
 class Solution:
     def distributeCookies(self, cookies: list[int], k: int) -> int:
@@ -24,12 +25,13 @@ class Solution:
                 dist[j] += cookies[curr_cookie_index]
                 back(curr_cookie_index + 1)
                 dist[j] -= cookies[curr_cookie_index]
+
         cookies.sort(reverse=True)
         back(0)
         return min_unfair
 
+
 # @lc code=end
 
-assert Solution().distributeCookies([8,15,10,20,8], 2) == 31
-assert Solution().distributeCookies([6,1,3,2,2,4,1,2], 3) == 7
-
+assert Solution().distributeCookies([8, 15, 10, 20, 8], 2) == 31
+assert Solution().distributeCookies([6, 1, 3, 2, 2, 4, 1, 2], 3) == 7

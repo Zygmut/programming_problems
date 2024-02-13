@@ -7,6 +7,7 @@
 from collections import deque
 from bisect import bisect
 
+
 # @lc code=start
 class Solution:
     def latestDayToCross(self, row: int, col: int, cells: list[list[int]]) -> int:
@@ -43,5 +44,9 @@ class Solution:
 
 assert Solution().latestDayToCross(2, 2, [[1, 1], [2, 1], [1, 2], [2, 2]]) == 2
 assert Solution().latestDayToCross(2, 2, [[1, 1], [1, 2], [2, 1], [2, 2]]) == 1
-assert Solution().latestDayToCross(3, 3, [[1, 2], [2, 1], [3, 3], [2, 2], [1, 1], [1, 3], [2, 3], [3, 2], [3, 1]] ) == 3
-
+assert (
+    Solution().latestDayToCross(
+        3, 3, [[1, 2], [2, 1], [3, 3], [2, 2], [1, 1], [1, 3], [2, 3], [3, 2], [3, 1]]
+    )
+    == 3
+)

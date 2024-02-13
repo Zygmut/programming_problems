@@ -4,6 +4,7 @@
 # [209] Minimum Size Subarray Sum
 #
 
+
 # @lc code=start
 class Solution:
     def minSubArrayLen(self, target: int, nums: list[int]) -> int:
@@ -21,6 +22,8 @@ class Solution:
                 left_idx = left_idx + 1
 
         return 0 if min_len == 100001 else min_len
+
+
 # @lc code=end
 
 assert Solution().minSubArrayLen(7, [2, 3, 1, 2, 4, 3]) == 2

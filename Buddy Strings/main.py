@@ -4,10 +4,11 @@
 # [859] Buddy Strings
 #
 
+
 # @lc code=start
 class Solution:
     def buddyStrings(self, s: str, goal: str) -> bool:
-        if (s == goal):
+        if s == goal:
             return len(set(s)) < len(goal)
 
         n = len(s)
@@ -26,9 +27,11 @@ class Solution:
         if i < j:
             tmp = list(s)
             tmp[i], tmp[j] = tmp[j], tmp[i]
-            s = ''.join(tmp)
+            s = "".join(tmp)
 
         return s == goal
+
+
 # @lc code=end
 
 assert Solution().buddyStrings("ab", "ba") == True

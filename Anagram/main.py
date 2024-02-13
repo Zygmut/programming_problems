@@ -15,6 +15,7 @@ def are_anagram(word1: str, word2: str):
     # return Counter(word1) == Counter(word2)
     return word1_dict == word2_dict
 
+
 if __name__ == "__main__":
     anagrams = [
         ("night", "thing"),
