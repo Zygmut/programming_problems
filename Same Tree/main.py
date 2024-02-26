@@ -14,10 +14,10 @@ def isSameTree(p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
     while queue:
         left, right = queue.pop()
 
-        if left is None and right is None:
+        if not (left or right):
             continue
 
-        if left is None or right is None:
+        if not (left and right):
             return False
 
         if left.val != right.val:
