@@ -7,18 +7,11 @@ class ListNode:
     val: int = 0
     next: Optional['ListNode'] = None
 
-def iter_to_ln(col: Iterable[Any]) -> Optional[ListNode]:
+def listnode_from_iter(col: Iterable[Any]) -> Optional[ListNode]:
     if not col:
         return None
 
     return reduce(lambda acc, val: ListNode(val, acc), reversed(list(col)), None)
-
-def ln_iter(head: ListNode) -> Generator[int, None, None]:
-    node: Optional[ListNode] = head
-
-    while node:
-        yield node.val
-        node = node.next
 
 @dataclass
 class KListNode(ListNode):
