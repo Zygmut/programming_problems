@@ -23,6 +23,19 @@ def removeNthFromEnd(head: Optional[ListNode], n: int) -> Optional[ListNode]:
 
     return node
 
+def removeNthFromEndFS(head: Optional[ListNode], n: int) -> Optional[ListNode]:
+    fast = slow = dummy = ListNode(0, head)
+
+    for _ in range(n + 1):
+        fast = fast.next # type: ignore
+
+    while fast:
+        fast = fast.next # type: ignore
+        slow = slow.next # type: ignore
+
+    slow.next = slow.next.next # type: ignore
+    return dummy.next
+
 if __name__ == "__main__":
     testcases: list[tuple[ListNode, int, ListNode]] = [
         (iter_to_ln([1,2,3,4,5]), 2, iter_to_ln([1,2,3,5])), # type: ignore
@@ -31,6 +44,6 @@ if __name__ == "__main__":
     ]
 
     assert all(
-        removeNthFromEnd(head, n) == expected
+        all(fn(head, n) == expected for fn in [removeNthFromEnd, removeNthFromEndFS])
         for head, n, expected in testcases
     )
