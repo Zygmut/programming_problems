@@ -3,12 +3,11 @@ root = true
 [*]
 charset = utf-8
 indent_size = 2
-indent_style = tab
+indent_style = space
 trim_trailing_whitespace = true
 
 [*.py]
 indent_size = 4
-indent_style = space
 
 [*.cs]
 # Newline settings
