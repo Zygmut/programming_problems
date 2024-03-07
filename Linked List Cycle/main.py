@@ -1,7 +1,9 @@
 import sys
+
 sys.path.append("..")
 from modules.data import ListNode
 from typing import Optional
+
 
 def hasCycle(self, head: Optional[ListNode]) -> bool:
     fast = slow = head

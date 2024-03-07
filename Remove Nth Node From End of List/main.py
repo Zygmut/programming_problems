@@ -1,8 +1,10 @@
 import sys
+
 sys.path.append("..")
 
 from typing import Optional, Generator
 from modules.data import ListNode, listnode_from_iter
+
 
 def removeNthFromEnd(head: Optional[ListNode], n: int) -> Optional[ListNode]:
     def _iter(head: Optional[ListNode]) -> Generator[int, None, None]:
@@ -23,24 +25,26 @@ def removeNthFromEnd(head: Optional[ListNode], n: int) -> Optional[ListNode]:
 
     return node
 
+
 def removeNthFromEndFS(head: Optional[ListNode], n: int) -> Optional[ListNode]:
     fast = slow = dummy = ListNode(0, head)
 
     for _ in range(n + 1):
-        fast = fast.next # type: ignore
+        fast = fast.next  # type: ignore
 
     while fast:
-        fast = fast.next # type: ignore
-        slow = slow.next # type: ignore
+        fast = fast.next  # type: ignore
+        slow = slow.next  # type: ignore
 
-    slow.next = slow.next.next # type: ignore
+    slow.next = slow.next.next  # type: ignore
     return dummy.next
+
 
 if __name__ == "__main__":
     testcases: list[tuple[ListNode, int, ListNode]] = [
-        (listnode_from_iter([1,2,3,4,5]), 2, listnode_from_iter([1,2,3,5])), # type: ignore
-        (listnode_from_iter([1]), 1, listnode_from_iter([])), # type: ignore
-        (listnode_from_iter([1,2]), 1, listnode_from_iter([1])), # type: ignore
+        (listnode_from_iter([1, 2, 3, 4, 5]), 2, listnode_from_iter([1, 2, 3, 5])),  # type: ignore
+        (listnode_from_iter([1]), 1, listnode_from_iter([])),  # type: ignore
+        (listnode_from_iter([1, 2]), 1, listnode_from_iter([1])),  # type: ignore
     ]
 
     assert all(
