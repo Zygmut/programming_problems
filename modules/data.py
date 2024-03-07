@@ -13,6 +13,12 @@ def listnode_from_iter(col: Iterable[Any]) -> Optional[ListNode]:
 
     return reduce(lambda acc, val: ListNode(val, acc), reversed(list(col)), None)
 
+def listnode_iter(node: ListNode) -> Generator[Any, None, None]:
+    head: Optional[ListNode] = node
+    while head:
+        yield head
+        head = head.next
+
 @dataclass
 class KListNode(ListNode):
     @staticmethod
