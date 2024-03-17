@@ -6,6 +6,6 @@ _:
     @just -l
 
 create name lang:
-    @mkdir "{{ proj_dir }}/{{ name }}"
-    @cp "{{ proj_dir }}/.templates/main.{{ lang }}" "{{ proj_dir }}/{{ name }}"
+    @mkdir "{{ proj_dir }}" / "{{ name }}"
+    @cp "{{ proj_dir }}" / ".templates" / "main.{{ lang }}" "{{ proj_dir }}" / "{{ name }}"
     @echo "Created \"{{ name }}\""
