@@ -10,6 +10,8 @@ def fn(n: int):
 
 
 if __name__ == "__main__":
-    testcases: List[Tuple[Any, Any]] = [(1, 1)]
+    testcases: List[Tuple[Any, Any]] = [
+        (1, 1),
+    ]
 
     assert all(fn(values) == expected for values, expected in testcases)
