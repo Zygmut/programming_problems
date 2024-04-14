@@ -9,6 +9,9 @@ trim_trailing_whitespace = true
 [*.py]
 indent_size = 4
 
+[*.rs]
+indent_size = 4
+
 [*.cs]
 # Newline settings
 csharp_new_line_before_else = true
