@@ -12,4 +12,4 @@ def longestConsecutive(self, nums: List[int]) -> int:
 
         length = max(length, end - start)
 
-    return length        
+    return length

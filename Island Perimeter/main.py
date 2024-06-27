@@ -17,6 +17,5 @@ def islandPerimeter(self, grid: List[List[int]]) -> int:
     sol = 0
     for row_idx, col_idx in island_tiles:
         sol += _get_adj(grid, row_idx, col_idx).count(0)
-        
+
     return sol
-        

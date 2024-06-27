@@ -23,5 +23,5 @@ class Solution:
 
             if node.right:
                 nodes.append((node.right, current_path))
-        
+
         return sum(leaf_nodes)
