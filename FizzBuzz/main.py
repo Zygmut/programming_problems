@@ -7,7 +7,7 @@ def fizz_buzz(
         tmp = []
 
         for cause, effect in conditions:
-            if cause(i) == True:
+            if cause(i):
                 tmp.append(effect)
 
         if not tmp:

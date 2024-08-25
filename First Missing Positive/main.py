@@ -6,7 +6,6 @@ from typing import Tuple, List, Dict
 
 
 def firstMissingPositive(nums: List[int]) -> int:
-
     nums_hash: Dict[int, int] = {n: 0 for n in nums}
 
     for n in range(1, len(nums) + 1):

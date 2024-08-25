@@ -1,4 +1,7 @@
-def isValidSudoku(self, board: List[List[str]]) -> bool:
+from typing import List
+
+
+def isValidSudoku(board: List[List[str]]) -> bool:
     number_iter = (
         (board[col][row], col, row)
         for col in range(9)

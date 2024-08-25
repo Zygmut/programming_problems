@@ -1,4 +1,7 @@
-def islandPerimeter(self, grid: List[List[int]]) -> int:
+from typing import List
+
+
+def islandPerimeter(grid: List[List[int]]) -> int:
     def _get_adj(matrix, row, col) -> tuple:
         return (
             matrix[row][col - 1] if (col - 1) >= 0 else 0,

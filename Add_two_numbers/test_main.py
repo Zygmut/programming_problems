@@ -1,5 +1,10 @@
 import pytest
-from main import *
+from main import Solution
+import sys
+
+sys.path.append("..")
+
+from modules.data import ListNode
 
 
 def create_list(values: tuple[int]) -> ListNode:

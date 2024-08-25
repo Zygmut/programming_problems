@@ -1,17 +1,12 @@
-#
-# @lc app=leetcode id=783 lang=python3
-#
-# [783] Minimum Distance Between BST Nodes
-#
+from collections import deque
+from typing import Optional
+import sys
+
+sys.path.append("..")
+
+from modules.data import TreeNode
 
 
-# @lc code=start
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
 class Solution:
     def minDiffInBST(self, root: Optional[TreeNode]) -> int:
         flattened_tree: list = []
@@ -31,6 +26,3 @@ class Solution:
                 flattened_tree.append(node.right.val)
 
         return abs(flattened_tree[-1] - flattened_tree[-2])
-
-
-# @lc code=end

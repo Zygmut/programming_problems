@@ -2,9 +2,10 @@
 
 pkgs.mkShellNoCC {
   packages = with pkgs; [
-    just
     pre-commit
+
     python3
+    go
   ];
 
   shellHook = ''

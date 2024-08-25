@@ -2,7 +2,7 @@ import sys
 
 sys.path.append("..")
 
-from typing import Tuple, List, Any
+from typing import Tuple, List
 
 
 def maxArea(height: List[int]) -> int:

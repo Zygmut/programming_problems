@@ -9,7 +9,6 @@ class Node:
 
 class Solution:
     def levelOrder(self, root: Node) -> list[list[int]]:
-
         res = []
         queue = [(root, 0)]
 

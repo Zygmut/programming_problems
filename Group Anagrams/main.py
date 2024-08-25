@@ -2,7 +2,7 @@ import sys
 
 sys.path.append("..")
 
-from typing import Tuple, List, Set, Dict
+from typing import Tuple, List, Dict
 
 
 def groupAnagrams(strs: List[str]) -> List[List[str]]:

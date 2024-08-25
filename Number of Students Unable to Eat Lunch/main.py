@@ -2,7 +2,7 @@ import sys
 
 sys.path.append("..")
 
-from typing import Tuple, List, Any
+from typing import Tuple, List
 
 
 def countStudents(students: List[int], sandwiches: List[int]) -> int:

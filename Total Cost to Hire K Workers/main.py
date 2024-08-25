@@ -1,10 +1,5 @@
-#
-# @lc app=leetcode id=2462 lang=python3
-#
-# [2462] Total Cost to Hire K Workers
-#
-
-# @lc code=start
+from heapq import heapify, heappush, heappop
+from typing import List
 
 
 class Solution:
@@ -31,6 +26,3 @@ class Solution:
                     heappush(right_heap, costs[right_threshold])
                     right_threshold -= 1
         return sol
-
-
-# @lc code=end

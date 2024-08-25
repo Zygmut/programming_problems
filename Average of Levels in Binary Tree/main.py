@@ -1,11 +1,8 @@
-# https://leetcode.com/problems/average-of-levels-in-binary-tree/
+import sys
 
+sys.path.append("..")
 
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+from modules.data import TreeNode
 
 
 class Solution:
@@ -14,9 +11,9 @@ class Solution:
 
         res = []
         while queue:
-            l = len(queue)
+            length = len(queue)
             sum = 0
-            for _ in range(l):
+            for _ in range(length):
                 node = queue.pop(0)
 
                 sum += node.val
@@ -27,5 +24,5 @@ class Solution:
                 if node.right:
                     queue.append(node.right)
 
-            res.append(sum / l)
+            res.append(sum / length)
         return res

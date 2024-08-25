@@ -1,13 +1,7 @@
-#
-# @lc app=leetcode id=1514 lang=python3
-#
-# [1514] Path with Maximum Probability
-#
-
 from collections import deque
+from typing import Deque
 
 
-# @lc code=start
 class Solution:
     def maxProbability(
         self,
@@ -17,13 +11,13 @@ class Solution:
         start: int,
         end: int,
     ) -> float:
-        adj: list[list[tuple(int, int), ...], ...] = [[] for _ in range(n)]
+        adj: list[list[tuple[int, int]]] = [[] for _ in range(n)]
 
         for [source, target], cost in zip(edges, succProb):
             adj[source].append((target, cost))
             adj[target].append((source, cost))
 
-        max_probability: list[float, ...] = [0.0] * n
+        max_probability: list[float] = [0.0] * n
         max_probability[start] = 1.0
 
         queue: Deque[int] = deque([start])
@@ -38,6 +32,3 @@ class Solution:
                     queue.append(connection)
 
         return max_probability[end]
-
-
-# @lc code=end

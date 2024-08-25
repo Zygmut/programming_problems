@@ -11,7 +11,6 @@ from bisect import bisect
 # @lc code=start
 class Solution:
     def latestDayToCross(self, row: int, col: int, cells: list[list[int]]) -> int:
-
         tup_cells = list(map(tuple, cells))
 
         def has_solution(step: int) -> int:

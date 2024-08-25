@@ -1,6 +1,5 @@
 from typing import List
 from itertools import accumulate
-from operator import add
 
 
 def shift(arr: List, n: int, default=0):

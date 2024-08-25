@@ -1,3 +1,11 @@
+from typing import Optional, List, Tuple
+import sys
+
+sys.path.append("..")
+
+from modules.data import TreeNode
+
+
 def addOneRow(root: Optional[TreeNode], val: int, depth: int) -> Optional[TreeNode]:
     if depth == 1:
         new_root = TreeNode(val, left=root)

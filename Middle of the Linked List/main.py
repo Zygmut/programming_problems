@@ -3,6 +3,10 @@ import sys
 sys.path.append("..")
 
 from typing import List, Tuple, Optional
+import sys
+
+sys.path.append("..")
+
 from modules.data import ListNode, listnode_from_iter
 
 

@@ -1,5 +1,12 @@
-def smallestFromLeaf(root: Optional[TreeNode]) -> str:
+import sys
 
+sys.path.append("..")
+
+from modules.data import TreeNode
+from typing import Optional
+
+
+def smallestFromLeaf(root: Optional[TreeNode]) -> str:
     queue = [(root, "")]
     sol = ""
 

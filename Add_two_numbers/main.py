@@ -1,15 +1,12 @@
-# https://leetcode.com/problems/add-two-numbers/
+import sys
 
+sys.path.append("..")
 
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from modules.data import ListNode
 
 
 class Solution(object):
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-
         if not isinstance(l1, ListNode):
             raise ValueError("First parameter is not a ListNode object")
 

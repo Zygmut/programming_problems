@@ -1,11 +1,11 @@
 # https://leetcode.com/problems/construct-string-from-binary-tree/
 
 
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+import sys
+
+sys.path.append("..")
+
+from modules.data import TreeNode
 
 
 class Solution:

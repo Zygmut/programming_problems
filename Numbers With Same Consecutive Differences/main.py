@@ -3,7 +3,6 @@
 
 class Solution:
     def numsSameConsecDiff(self, n: int, k: int) -> list[int]:
-
         if n < 2 or n > 9:
             raise ValueError("n in [2,9]")
 

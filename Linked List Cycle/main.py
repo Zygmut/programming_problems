@@ -1,6 +1,10 @@
 import sys
 
 sys.path.append("..")
+import sys
+
+sys.path.append("..")
+
 from modules.data import ListNode
 from typing import Optional
 

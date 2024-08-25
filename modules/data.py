@@ -4,6 +4,13 @@ from functools import reduce
 
 
 @dataclass
+class TreeNode:
+    val: int = 0
+    left: Optional["TreeNode"] = None
+    right: Optional["TreeNode"] = None
+
+
+@dataclass
 class ListNode:
     val: int = 0
     next: Optional["ListNode"] = None

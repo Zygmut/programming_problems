@@ -2,7 +2,6 @@ from collections import Counter
 
 
 def findLeastNumOfUniqueInts(arr: list[int], k: int) -> int:
-
     freq_mat = Counter(arr)
     sorted_freq = sorted(freq_mat.items(), key=lambda x: x[1])
 
