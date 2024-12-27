@@ -6,7 +6,7 @@ func maxScoreSightseeingPair(values []int) int {
 
 	for idx := 1; idx < len(values); idx++ {
 		maxScore = max(maxScore, candidate+values[idx]-idx)
-		candidate = max(candidate, values[idx]-idx)
+		candidate = max(candidate, values[idx]+idx)
 	}
 
 	return maxScore

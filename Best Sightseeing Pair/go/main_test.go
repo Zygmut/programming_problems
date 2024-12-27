@@ -12,6 +12,7 @@ type TestCase struct {
 var testCases = []TestCase{
 	{[]int{8, 1, 5, 2, 6}, 11},
 	{[]int{1, 2}, 2},
+	{[]int{1, 3, 5}, 7},
 }
 
 func Test(t *testing.T) {
