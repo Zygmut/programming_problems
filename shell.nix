@@ -10,9 +10,13 @@ pkgs.mkShellNoCC {
 
     cargo
     rustc
+    gcc
+    rustfmt
   ];
 
   shellHook = ''
     pre-commit install
   '';
+
+  RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
 }
