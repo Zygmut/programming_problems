@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import Any, Optional, Iterable, Generator
+from typing import Any, Optional, Iterable, Generator, List
 from functools import reduce
 
 
@@ -9,6 +9,23 @@ class TreeNode:
     left: Optional["TreeNode"] = None
     right: Optional["TreeNode"] = None
 
+    @staticmethod
+    def from_list(values: List[Any]) -> Optional["TreeNode"]:
+        if not values:
+            return None
+
+        LEN = len(values)
+
+        def rec(idx: int) -> Optional["TreeNode"]:
+            if idx >= LEN:
+                return None
+
+            if not values[idx]:
+                return None
+
+            return TreeNode(values[idx], rec(2*idx+1), rec(2*idx+2))
+
+        return rec(0)
 
 @dataclass
 class ListNode:
