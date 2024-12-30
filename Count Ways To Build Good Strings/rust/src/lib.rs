@@ -1,5 +1,6 @@
 pub fn count_good_strings(low: i32, high: i32, zero: i32, one: i32) -> i32 {
     const MOD: i32 = 1000000007;
+
     let low = low as usize;
     let high = high as usize;
     let zero = zero as usize;
