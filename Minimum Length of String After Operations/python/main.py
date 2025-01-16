@@ -4,6 +4,7 @@ sys.path.append("..")
 
 from typing import Tuple, List, Any, Dict
 
+
 def fn(s: str) -> int:
     isEven: Dict[str, bool] = {}
 
@@ -11,6 +12,7 @@ def fn(s: str) -> int:
         isEven[char] = not isEven.get(char, True)
 
     return len(isEven) + sum(isEven.values())
+
 
 if __name__ == "__main__":
     testcases: List[Tuple[Any, Any]] = [

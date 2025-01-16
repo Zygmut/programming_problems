@@ -17,7 +17,7 @@ def fn(days: List[int], costs: List[int]) -> int:
         memo[day] = min(
             memo[day - 1] + costs[0],
             memo[max(0, day - 7)] + costs[1],
-            memo[max(0, day - 30)] + costs[2]
+            memo[max(0, day - 30)] + costs[2],
         )
 
     return int(memo[-1])
@@ -25,8 +25,8 @@ def fn(days: List[int], costs: List[int]) -> int:
 
 if __name__ == "__main__":
     testcases: List[Tuple[Any, Any]] = [
-        (([1,4,6,7,8,20], [2,7,15]), 11),
-        (([1,2,3,4,5,6,7,8,9,10,30,31], [2,7,15]), 17),
+        (([1, 4, 6, 7, 8, 20], [2, 7, 15]), 11),
+        (([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 30, 31], [2, 7, 15]), 17),
     ]
 
     assert all(fn(*values) == expected for values, expected in testcases)

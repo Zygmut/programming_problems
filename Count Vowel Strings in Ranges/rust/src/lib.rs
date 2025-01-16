@@ -1,18 +1,19 @@
 use std::collections::HashSet;
 
 fn is_valid(word: &str, vowels: &HashSet<char>) -> bool {
-    vowels.contains(&word.chars().next().unwrap())
-        && vowels.contains(&word.chars().last().unwrap())
+    vowels.contains(&word.chars().next().unwrap()) && vowels.contains(&word.chars().last().unwrap())
 }
 
 pub fn vowel_strings(words: Vec<String>, queries: Vec<Vec<i32>>) -> Vec<i32> {
     let vowels: HashSet<char> = HashSet::from(['a', 'e', 'i', 'o', 'u']);
 
-    let prefix: Vec<i32> = vec![0].into_iter().chain(words.iter()
-    .scan(0, |state, word| {
-        *state += is_valid(word, &vowels) as i32;
-        Some(*state)
-    })).collect();
+    let prefix: Vec<i32> = vec![0]
+        .into_iter()
+        .chain(words.iter().scan(0, |state, word| {
+            *state += is_valid(word, &vowels) as i32;
+            Some(*state)
+        }))
+        .collect();
 
     queries
         .iter()

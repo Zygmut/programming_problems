@@ -17,10 +17,7 @@ mod test {
 
     #[test]
     fn run_all_tests() {
-        let tests = vec![
-            (String::from("abaacbcbb"), 5),
-            (String::from("aa"), 2),
-        ];
+        let tests = vec![(String::from("abaacbcbb"), 5), (String::from("aa"), 2)];
 
         for (words, expected) in tests.iter() {
             assert_eq!(f(words.clone()), *expected);

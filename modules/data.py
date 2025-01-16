@@ -23,9 +23,10 @@ class TreeNode:
             if not values[idx]:
                 return None
 
-            return TreeNode(values[idx], rec(2*idx+1), rec(2*idx+2))
+            return TreeNode(values[idx], rec(2 * idx + 1), rec(2 * idx + 2))
 
         return rec(0)
+
 
 @dataclass
 class ListNode:
